@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player Extension Bar</title>
+</head>
+<body>
+[Remote Audio Player]
+<input type="text" id="audioSource" value="http://pyc.nebyoolae.com/music/singles/pyc-revolver_unloaded.mp3" style="width:250px" onkeyup="audioSourceChange(this)"/>
+<audio id="music"></audio>
+
+<input type="button" id="btnPlay" value=">" onclick="playIt()" title="Play">
+<input type="button" id="btnPause" value="||" onclick="pauseIt()" title="Pause">
+<input type="button" id="btnStop" value="[]" onclick="stopIt()" title="Stop">
+
+<input id="curTime" type="range" onchange="timeChange(this)" />
+
+&nbsp;
+<strong>Vol</strong>: <label id="volMeter"></label>
+<input type="button" id="btnVolUp" value="+" onclick="volUp()" title="Vol +">
+<input type="button" id="btnVolDown" value="-" onclick="volDown()" title="Vol -">
+
+&nbsp;
+<strong>Status</strong>: <label id="statusMsg"></label>
+
+<script type="text/javascript" src="musicplayer.js"></script>
+</body>
+</html>
